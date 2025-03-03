@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Formato git02</title>
+</head>
+<body>
+    <h1 id="title">FROMULARIO SENA V3</h1>
+    <p id="description">
+      GRACIAS POR DEJAR SUS DATOS
+    </p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label"
+          >Name<input
+            id="name"
+            type="text"
+            placeholder="Please enter your name"
+            required
+        /></label>
+        <label id="email-label"
+          >Email<input
+            id="email"
+            type="email"
+            placeholder="Please enteryour email"
+            required
+        /></label>
+        <label id="number-label"
+          >Age<input
+            id="number"
+            type="number"
+            min="15"
+            max="80"
+            placeholder="Please enter your age"
+            required
+        /></label>
+        <label for="dropdown"
+          >Choose an option
+          <select id="dropdown">
+            <option value=" ">Select One Option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </label>
+        <label id="radio-buttons">
+          Do you plan to buy a new car in the next 5 years?
+          <label
+            ><input class="inline" name="account-type" type="radio" value="yes" />Yes</label
+          >
+          <label
+            ><input class="inline" name="account-type" type="radio" value="no" />No</label
+          >
+          <label
+            ><input
+              class="inline"
+              name="account-type"
+              type="radio"
+              value="maybe"
+            />Maybe</label
+          >
+        </label>
+      </fieldset>
+      <fieldset>
+        <label id="brands" for="dropdown"
+          >what is your favorite car brand?
+          <select id="dropdown">
+            <option value="">Select One Option</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+          </select>
+        </label>
+
+        <label for="dropdown"
+          >what type of means of trasnportation do you own ?
+          <label><input class="inline" value="car" type="checkbox" />Car</label>
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              id="vehicle3"
+              name="Boat"
+              value="Boat"
+            />Boat</label
+          >
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              id="vehicle4"
+              name="Bicycle"
+              value="Bicycle"
+            />Bicycle</label
+          >
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              id="vehicle5"
+              name="Motorcycle"
+              value="Motorcycle"
+            />Motorcycle</label
+          >
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              id="vehicle6"
+              name="Plane"
+              value="Plane"
+            />Plane</label
+          >
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              id="vehicle1"
+              name="Bike"
+              value="Bike"
+            />Bike</label
+          >
+        </label>
+      </fieldset>
+      <fieldset>
+        <label
+          >Any comments or suggestions?
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="Please enter your comments"
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+</body>
+</html>
