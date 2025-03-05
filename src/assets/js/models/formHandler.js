@@ -10,36 +10,37 @@ export default function setupFormHandler() {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const ageInput = document.getElementById('age');
-    const dropdownInput = document.getElementById('dropdown');
-    const commentsInput = document.getElementById('comments');
+    const fields = {
+      name: document.getElementById('name'),
+      email: document.getElementById('email'),
+      age: document.getElementById('age'),
+      dropdown: document.getElementById('dropdown'),
+      comments: document.getElementById('comments'),
+    };
 
-    if (!nameInput || !emailInput || !ageInput || !dropdownInput || !commentsInput) {
+    // Validar que todos los elementos existen en el DOM
+    if (Object.values(fields).some((field) => !field)) {
       console.error('Uno o más elementos del formulario no existen en el DOM'); // eslint-disable-line no-console
       return;
     }
 
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const age = Number(ageInput.value);
-    const dropdown = dropdownInput.value;
+    const { name, email, age, dropdown, comments } = fields;
     const radioButtons = document.querySelectorAll('input[name="choice"]:checked');
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    const comments = commentsInput.value.trim();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (
-      name
-        && emailRegex.test(email)
-        && !Number.isNaN(age) && age > 0
-        && dropdown !== ''
-        && radioButtons.length > 0
-        && checkboxes.length > 0
-        && comments
-    ) {
+    const isValid =
+      name.value.trim() &&
+      emailRegex.test(email.value.trim()) &&
+      !Number.isNaN(Number(age.value)) &&
+      Number(age.value) > 0 &&
+      dropdown.value !== '' &&
+      radioButtons.length > 0 &&
+      checkboxes.length > 0 &&
+      comments.value.trim();
+
+    if (isValid) {
       messageContainer.textContent = 'FORMULARIO ENVIADO CON ÉXITO';
       messageContainer.style.color = 'green';
       form.reset();
