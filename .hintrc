@@ -7,13 +7,12 @@
     },
     "extends": ["development"],
     "formatters": ["stylish"],
-    "hints": {
-      "button-type": "error",
-      "disown-opener": "warning",
-      "html-checker": "error",
-      "meta-charset-utf-8": "error",
-      "meta-viewport": "error",
-      "no-inline-styles": "error"
-    }
+    "hints": [
+      "button-type",
+      "disown-opener",
+      "html-checker",
+      "meta-charset-utf-8",
+      "meta-viewport",
+      "no-inline-styles:error"
+    ]
   }
-  

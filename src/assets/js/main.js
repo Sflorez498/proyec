@@ -1,3 +1,5 @@
-import setupFormHandler from './src/assets/js/models/formHandler.js';
+import { setupFormHandler } from "./js/modules/formHandler";
 
-document.addEventListener('DOMContentLoaded', setupFormHandler);
+document.addEventListener("DOMContentLoaded", () => {
+    setupFormHandler();
+});
