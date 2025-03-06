@@ -14,7 +14,7 @@ body::before {
   z-index: -1;
   background-image:
     linear-gradient(115deg, rgba(54, 178, 235, 0.5), rgba(9, 86, 228, 0.5)),
-    url(./geometry-1023846_1920.jpg);
+    url(./mountain-9423779_1280.webp);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -50,6 +50,7 @@ p {
 fieldset {
   border: none;
   margin: 0;
+  padding: auto;
 }
 
 input,
@@ -81,6 +82,7 @@ label {
   display: inline-block;
   width: unset;
   margin: 0 0.3em;
+  padding: auto;
   vertical-align: middle;
 }
 
@@ -88,6 +90,7 @@ input[type="submit"] {
   display: block;
   width: 25vw;
   margin: auto;
+  padding: auto;
   color: rgb(0, 0, 0);
   background-color: rgb(195, 185, 174);
   border-color: rgb(0, 0, 0);
