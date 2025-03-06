@@ -6,7 +6,7 @@
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2021,
     "sourceType": "module"
   },
   "extends": ["airbnb-base"],
@@ -14,14 +14,18 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "no-console": "off",
-    "import/extensions": ["error", {
-      "js": "always",
-      "json": "always"
-    }]
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "json": "always"
+      }
+    ]
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "node_modules/"
   ]
 }
